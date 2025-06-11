@@ -49,20 +49,3 @@ if st.button("👉 Begin Beyond Performance Experience"):
         st.balloons()
     else:
         st.error("Please complete all required fields (Full Name and Email).")
-  def calculate_discounted_price(base_price, promo_code):
-    """
-    Calculates the final price based on promo code logic.
-    Supports:
-    - BPR1: 10% discount
-    """
-    valid_codes = {
-        "BPR1": 0.10
-    }
-
-    discount_rate = valid_codes.get(promo_code.upper(), 0)
-    if discount_rate > 0:
-        discounted_price = base_price * (1 - discount_rate)
-        return round(discounted_price, 2), True
-    else:
-        return base_price, False      
-
